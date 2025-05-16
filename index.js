@@ -1,6 +1,9 @@
 const Express = require("express");
 const products = require("./products.json");
 
+//enable env variables
+require("dotenv").config();
+
 //create a API Server
 const API_SERVER = Express();
 
