@@ -11,9 +11,9 @@ API_SERVER.use(Express.json());
 API_SERVER.use(Express.static("public"));
 
 //start and listen incoming request to this server
-API_SERVER.listen(3000,"localhost", () => {
+API_SERVER.listen(process.env.PORT,process.env.HOSTNAME, () => {
     console.log("Server started");
-    console.log("http://localhost:3000");
+    console.log(`http://${process.env.HOSTNAME}:${process.env.PORT}`);
 });
 
 
